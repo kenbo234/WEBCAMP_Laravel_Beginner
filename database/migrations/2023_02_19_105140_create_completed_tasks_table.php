@@ -28,5 +28,10 @@ class CreateCompletedTasksTable extends Migration
             $table->primary('id');
         });
     }
+    
+    public function down()
+    {
+        Schema::dropIfExists('completed_tasks');
+    }
 
 }
